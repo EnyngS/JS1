@@ -1,0 +1,231 @@
+// Файл обнуляющих стилей
+@import "_nullstyle";
+
+$maxWidth: 1280;
+@mixin adaptiv-font($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$maxWidth: $maxWidth - 320;
+	font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+// Переменные для блока
+body {
+	margin: 0 auto;
+	max-width: 1000px;
+}
+.button {
+	text-align: center;
+	background-color: aqua;
+	height: 100px;
+	width: 200px;
+	margin: 0 auto;
+	button {
+		font-size: 25px;
+		color: red;
+		width: 100%;
+		height: 100%;
+		background-color: aqua;
+	}
+}
+
+// overflow: hidden;
+// position: absolute;
+
+.content {
+	font-size: 20px;
+	margin: 20px;
+	// transform: translate(0, 0);
+	transition: max-height 1s ease-out;
+	overflow: hidden;
+	max-height: 0;
+}
+.content-hidden {
+	// overflow: hidden;
+	// position: relative;
+	// transform: translate(0, -129%);
+	transition: max-height 1s ease-out;
+}
+// --------------------------
+.accordeon {
+	font-size: 20px;
+	background-color: #708090;
+	color: white;
+	padding: 20px;
+	&__title {
+		padding: 20px;
+		font-size: 25px;
+		border-bottom: 2px white solid;
+		cursor: pointer;
+	}
+
+	&__content {
+		transition: max-height 0.5s ease-out;
+		overflow: hidden;
+		max-height: 0;
+	}
+	&__hidden {
+		transition: max-height 0.5s ease-out;
+		// display: none;
+	}
+}
+// ---------------------
+
+.tab {
+	margin: 30px;
+	// position: absolute;
+
+	max-width: 900px;
+	overflow: hidden;
+	&__wrap {
+		display: flex;
+		margin: 0 -20px;
+		justify-content: space-between;
+	}
+
+	&__title {
+		flex: 0 1 30%;
+		padding: 20px;
+		background-color: gray;
+		color: aqua;
+		font-size: 25px;
+		text-align: center;
+		margin: 0 20px;
+		cursor: pointer;
+	}
+
+	&__content {
+		margin: 30px 0;
+		padding: 10px;
+		font-size: 20px;
+		font-family: sans-serif;
+		background-color: #708090;
+		transition: 0.5s ease;
+		position: relative;
+
+		animation-duration: 1s;
+		animation-name: slidein;
+		@keyframes slidein {
+			from {
+				left: 100%;
+				// width: 300%;
+			}
+
+			to {
+				left: 0%;
+				// width: 100%;
+			}
+		}
+	}
+	&__hidden {
+		display: none;
+	}
+}
+// ---------------------------------
+
+.modal {
+	&__btn {
+		display: inline-block;
+		padding: 20px;
+		background-color: black;
+		color: white;
+		font-size: 20px;
+		cursor: pointer;
+		font-size: 20px;
+		text-align: center;
+	}
+
+	&__box {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		// min-height: 100%;
+		// min-width: 100%;
+		background-color: rgba(255, 255, 128, 0.5);
+		transform: scale(1);
+		transition: 0.5s ease;
+	}
+	&__hidden {
+		// display: none;
+		transform: scale(0);
+		transition: 0.5s ease;
+	}
+
+	&__content {
+		position: relative;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		padding: 30px;
+		background-color: white;
+		max-width: 40%;
+	}
+
+	&__text {
+		font-size: 15px;
+	}
+
+	&__close {
+		display: inline-block;
+		padding: 10px;
+		font-size: 20px;
+		background-color: black;
+		color: white;
+		cursor: pointer;
+	}
+}
+// ------------------------------
+
+.modals {
+	margin: 30px;
+	&__btn {
+		display: inline-block;
+		padding: 20px;
+		background-color: #708090;
+		color: white;
+		font-size: 20px;
+		cursor: pointer;
+		font-size: 20px;
+		text-align: center;
+	}
+
+	&__box {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background-color: rgba(255, 255, 128, 0.5);
+		transform: scale(1);
+		transition: 0.5s ease;
+	}
+	&__hidden {
+		// display: none;
+		transform: scale(0);
+		transition: 0.5s ease;
+	}
+
+	&__content {
+		position: relative;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		padding: 30px;
+		background-color: white;
+		max-width: 40%;
+	}
+
+	&__text {
+		font-size: 15px;
+	}
+
+	&__close {
+		display: inline-block;
+		padding: 10px;
+		font-size: 20px;
+		background-color: black;
+		color: white;
+		cursor: pointer;
+	}
+}

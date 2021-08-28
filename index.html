@@ -5,11 +5,101 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="/css/style.css">
 	<title>Document</title>
 </head>
 
 <body>
+
+	<div class="button">
+		<button>Открыть</button>
+	</div>
+
+	<div class="content content-hidden">
+		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae aut sed quod asperiores expedita, totam
+		dolorum quos similique perspiciatis inventore assumenda minus, dolores ducimus deserunt! Quis dolor nesciunt
+		officia molestiae sed beatae, aut ipsa ea nobis deserunt ipsam velit illo, unde rerum debitis ducimus quibusdam
+		quisquam nihil error voluptate natus!
+	</div>
+
+	<div class="accordeon">
+		<div class="accordeon__title">блок 1</div>
+		<div class="accordeon__content accordeon__hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem,
+			architecto! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, labore? </div>
+		<div class="accordeon__title">блок 2</div>
+		<div class="accordeon__content accordeon__hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem,
+			architecto! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, labore? </div>
+		<div class="accordeon__title">блок 3</div>
+		<div class="accordeon__content accordeon__hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem,
+			architecto! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, labore? </div>
+		<div class="accordeon__title">блок 4</div>
+		<div class="accordeon__content accordeon__hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem,
+			architecto! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, labore? </div>
+	</div>
+	<div class="tab">
+		<div class="tab__wrap">
+			<div class="tab__title" data-tab='tab-1'>tab 1</div>
+			<div class="tab__title" data-tab='tab-2'>tab 2</div>
+			<div class="tab__title" data-tab='tab-3'>tab 3</div>
+		</div>
+		<div class="tab__content" id='tab-1'> tab 1 <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+			rem
+			temporibus placeat blanditiis dolorum eaque . Quo!</div>
+		<div class="tab__content tab__hidden" id='tab-2'>tab 2 <br>Lorem ipsum dolor sit amet consectetur adipisicing
+			elit. Eveniet
+			rem
+			temporibus placeat blanditiis dolorum eaque reprehenderit, esse nihil. Minima eaque unde nostrum sint suscipit
+			ipsam accusantium possimus iste similique. Quo! Lorem ipsum dolor sit amet.</div>
+		<div class="tab__content tab__hidden" id='tab-3'>tab 3 <br>Lorem ipsum dolor sit amet consectetur adipisicing
+			elit. Eveniet
+			rem
+			temporibus placeat blanditiis dolorum eaque reprehenderit, esse nihil. Minima eaque unde nostrum sint suscipit
+			ipsam accusantium possimus iste similique. Quo!</div>
+	</div>
+	<div class="modal">
+		<div class="modal__btn">Модальное 1</div>
+		<div class="modal__box modal__hidden">
+			<div class="modal__content">
+				<div class="modal__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae natus earum
+					iure maxime pariatur numquam labore quidem, necessitatibus delectus ipsum cupiditate nihil, ipsa, harum
+					quo quasi laborum quia assumenda unde?</div>
+				<div class="modal__close">закрыть</div>
+			</div>
+		</div>
+	</div>
+	<!-- ---------------------------- -->
+	<div class="modals">
+		<div class="modals__btn" data-modals='modal-1'>Модальное 1</div>
+		<div class="modals__box modals__hidden  " data-box id='modal-1'>
+			<div class="modals__content">
+				<div class="modals__text">MOdal-1 <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae
+					natus earum
+					iure maxime pariatur numquam labore quidem, necessitatibus delectus ipsum cupiditate nihil, ipsa, harum
+					quo quasi laborum quia assumenda unde?</div>
+				<div class="modals__close" data-modals-close>закрыть</div>
+			</div>
+		</div>
+		<div class="modals__btn" data-modals='modal-2'>Модальное 2</div>
+		<div class="modals__box modals__hidden " data-box id='modal-2'>
+			<div class="modals__content">
+				<div class="modals__text">MOdal-2 <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae
+					natus earum
+					iure maxime pariatur numquam labore quidem, necessitatibus delectus ipsum cupiditate nihil, ipsa, harum
+					quo quasi laborum quia assumenda unde?</div>
+				<div class="modals__close" data-modals-close>закрыть</div>
+			</div>
+		</div>
+		<div class="modals__btn" data-modals='modal-3'>Модальное 3</div>
+		<div class="modals__box modals__hidden " data-box id='modal-3'>
+			<div class="modals__content">
+				<div class="modals__text">MOdal-3 <br> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae
+					natus earum
+					iure maxime pariatur numquam labore quidem, necessitatibus delectus ipsum cupiditate nihil, ipsa, harum
+					quo quasi laborum quia assumenda unde?</div>
+				<div class="modals__close" data-modals-close>закрыть</div>
+			</div>
+		</div>
+	</div>
 	<script src="main.js">
 
 	</script>
